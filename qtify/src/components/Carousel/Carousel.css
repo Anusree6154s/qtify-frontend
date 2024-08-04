@@ -10,8 +10,10 @@
 .swiper-button-next {
   background-size: contain;
   background-repeat: no-repeat;
+  transform: translateY(-50%);
 }
 .swiper-button-prev::after,
 .swiper-button-next::after {
   content: none;
 }
+
