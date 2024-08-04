@@ -25,7 +25,8 @@ export default function Section({ title, data, songs = false, genres }) {
                                 backgroundColor: "transparent",
                                 border: "none",
                                 color: "var(--color-primary)",
-                                fontWeight: 'bold'
+                                fontWeight: 'bold',
+                                cursor: 'pointer'
                             }}
                             onClick={() => setCollapse(!collapsed)}
                         >
