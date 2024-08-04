@@ -1,0 +1,17 @@
+.swiper-button-prev {
+  background: url("../../assets/prev-button-image.svg");
+}
+
+.swiper-button-next {
+  background: url("../../assets/next-button-image.svg");
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  content: none;
+}
