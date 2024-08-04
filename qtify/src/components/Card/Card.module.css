@@ -1,0 +1,32 @@
+.chip {
+  background-color: var(--color-black);
+  color: white;
+}
+
+.container {
+  height: 250px;
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.img-container {
+  width: 100%;
+  height: 75%;
+}
+
+.img {
+  height: 100%;
+  width: 100%;
+}
+
+.chip-container {
+  text-align: left;
+  display: flex;
+  align-items: center;
+  flex: 1;
+  margin-left: 10px;
+}
