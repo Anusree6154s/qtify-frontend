@@ -57,10 +57,11 @@ function AlbumDetails() {
         <div style={{ color: 'white', textAlign: 'left' }}>
 
             <Stack style={{ padding: '5%' }} spacing={2}>
-                <ArrowCircleLeftOutlinedIcon onClick={() => navigate('/')} style={{ cursor: 'pointer', height: '4%', width: '4%' }} />
 
                 <div style={{ display: 'flex', gap: 30, height: '30vh' }}>
-                    <img src={album.image} alt={album.title} style={{ width: '30vh', height: '100%', flex: 0.30, borderRadius: '20px' }} />
+                    <ArrowCircleLeftOutlinedIcon onClick={() => navigate('/')} style={{ cursor: 'pointer', height: '5vh', width: '5vh', }} />
+
+                    <img src={album.image} alt={album.title} style={{ width: '30vh', height: '100%', flex: 0.15, borderRadius: '20px' }} />
                     <div style={{ flex: 1 }}>
                         <h3>{album.title}</h3>
                         <div style={{ color: 'grey', fontSize: '12px' }}>
