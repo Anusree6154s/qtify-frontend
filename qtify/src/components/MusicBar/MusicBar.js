@@ -29,7 +29,7 @@ function MusicBar() {
                         setPlay(false)
                         return 100
                     }
-                    return oldProgress + 1
+                    return oldProgress + 0.1
                 })
             }, [100])
         } else {
