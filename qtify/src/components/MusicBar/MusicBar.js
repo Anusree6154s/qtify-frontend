@@ -25,7 +25,7 @@ function MusicBar() {
             audioRef.current.play();
             timer = setInterval(() => {
                 setProgress((oldProgress) => {
-                    if (oldProgress === 100) {
+                    if (Math.floor(oldProgress) === 100) {
                         setPlay(false)
                         return 100
                     }
