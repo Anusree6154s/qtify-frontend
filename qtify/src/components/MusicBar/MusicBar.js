@@ -29,7 +29,7 @@ function MusicBar() {
                         setPlay(false)
                         return 100
                     }
-                    return oldProgress + ( audioRef.current.duration/5000)
+                    return oldProgress + 0.05
                 })
             }, [100])
         } else {
