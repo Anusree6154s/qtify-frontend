@@ -10,7 +10,7 @@ import Pagination from '@mui/material/Pagination';
 import { MusicContext } from "../../MusicContext";
 
 function AlbumDetails() {
-  
+
     const { id } = useParams();
     const [album, setAlbum] = useState(null);
     const [page, setPage] = useState(1);
@@ -55,7 +55,7 @@ function AlbumDetails() {
 
     return (
         <div style={{ color: 'white', textAlign: 'left' }}>
-           
+
             <Stack style={{ padding: '5%' }} spacing={2}>
                 <ArrowCircleLeftOutlinedIcon onClick={() => navigate('/')} style={{ cursor: 'pointer', height: '4%', width: '4%' }} />
 
@@ -80,7 +80,7 @@ function AlbumDetails() {
                                 color: 'white',
                             },
                             '& .Mui-selected': {
-                                backgroundColor: 'var(--color-primary)',
+                                backgroundColor: '#34c94b',
                                 color: 'white',
                             },
                             '& .MuiPaginationItem-root.Mui-selected:hover': {
