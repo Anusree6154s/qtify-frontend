@@ -40,10 +40,14 @@ h2 {
 }
 
 .faqAccordion {
+    border: 1px solid white;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.faqAccordionSummary {
   background-color: var(--color-black);
   color: white;
-  border: 1px solid white;
-  border-radius: 5px;
 }
 
 .faqAccordionDetails {
