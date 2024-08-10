@@ -1,0 +1,103 @@
+.loading {
+  color: white;
+}
+
+.albumDetails {
+  text-align: left;
+  color: white;
+}
+
+.albumDetails .stack {
+  padding: 5%;
+}
+
+.albumDetails .header {
+  display: flex;
+  gap: 30px;
+  height: 30vh;
+}
+
+.albumDetails .header svg {
+  cursor: pointer;
+  height: 5vh;
+  width: 5vh;
+}
+
+.albumDetails .header img {
+  width: 30vh;
+  height: 100%;
+  flex-basis: 15%;
+  border-radius: 20px;
+}
+
+.albumDetails .header > div {
+  flex: 1;
+}
+
+.albumDetails .header > div div {
+  color: grey;
+  font-size: 12px;
+}
+
+.albumDetails .pagination {
+  text-align: right;
+}
+
+.albumDetails nav {
+  display: inline-block;
+}
+
+.albumDetails button[aria-current="true"] {
+  background-color: #34c94b;
+}
+
+.albumDetails button[aria-current="true"]:hover {
+  background-color: green;
+  color: white;
+}
+
+.albumDetails button {
+  color: white;
+}
+
+.albumDetails button:hover {
+  background-color: white;
+  color: black;
+}
+
+.albumDetails .table {
+  background-color: var(--color-black) !important;
+}
+
+.albumDetails thead th {
+  color: white;
+  border: none;
+  text-align: left;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.albumDetails tbody tr {
+  cursor: pointer;
+}
+
+.albumDetails tbody td {
+  color: #fff;
+  font-size: 12px;
+  border-bottom: 1px solid #ccc;
+}
+
+.albumDetails tbody td:first-child {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.albumDetails tbody td:first-child img {
+  width: 40px;
+  height: 40px;
+}
+
+.albumDetails tbody td:last-child {
+  text-align: right;
+}

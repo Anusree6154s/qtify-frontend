@@ -33,7 +33,6 @@ const Listbox = styled("ul")({
 });
 
 function Search({ searchData, placeholder }) {
-    // console.log(searchData)
     const {
         getRootProps,
         getInputLabelProps,

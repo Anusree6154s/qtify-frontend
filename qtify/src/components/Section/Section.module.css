@@ -1,0 +1,53 @@
+.container {
+  padding: 3%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.title {
+  color: #fff;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.collapseButton {
+  background-color: transparent;
+  border: none;
+  color: var(--color-primary);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.cardContainer {
+  cursor: pointer;
+}
+
+.cardTitle {
+  color: white;
+  text-align: left;
+  font-size: 14px;
+}
+
+h2 {
+  color: white;
+}
+
+.faqContainer {
+  margin: 0% 10%;
+}
+
+.faqAccordion {
+  background-color: var(--color-black);
+  color: white;
+  border: 1px solid white;
+  border-radius: 5px;
+}
+
+.faqAccordionDetails {
+  background-color: white;
+  color: var(--color-black);
+  text-align: left;
+}

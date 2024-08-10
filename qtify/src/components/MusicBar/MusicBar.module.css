@@ -1,0 +1,69 @@
+.bar {
+  height: 15vh;
+  border-top: 2px solid grey;
+  position: sticky;
+  bottom: 0px;
+  background-color: var(--color-black);
+  z-index: 3000;
+  display: flex;
+}
+
+.info {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 2%;
+  gap: 10px;
+}
+
+.info img {
+  width: 10vh;
+  height: 10vh;
+  object-fit: fit;
+}
+
+.info div {
+  color: white;
+  text-align: left;
+}
+
+.info div > span:first-child {
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.info div > span:last-child {
+  font-size: 8px;
+}
+
+.playArea {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.playArea button {
+  background-color: var(--color-black);
+  border: none;
+  cursor: pointer;
+}
+
+.playArea button svg {
+  color: white;
+}
+
+.playArea > div {
+  width: 60%;
+}
+
+.playArea > div > span {
+  background-color: white;
+}
+
+.playArea > div > span > span {
+  background-color: var(--color-primary);
+}
