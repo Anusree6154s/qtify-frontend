@@ -21,7 +21,7 @@ During the course of this project:
 
 <br>
 <div align="center"> 
-<img src="./readme-images/home-page.png" width="50%" >
+<img src="readme images/home page.png" width="70%" >
 <p align="center">QTify Home Page Interface</p>
 </div>
 
@@ -50,7 +50,7 @@ During the course of this project:
   - React.js, Component Design, Responsive Design, CSS, Reusable Components, Event Handling, Figma Assets
   <br>
   <div align="center"> 
-  <img src="./readme-images/navbar-and-hero.png" width="50%" >
+  <img src="readme images/navbar and hero.png" width="70%" >
   <p align="center"> Navbar and Hero section</p>
   </div>
 
