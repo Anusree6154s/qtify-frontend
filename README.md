@@ -3,7 +3,7 @@
 > **Purpose of repo:** To deploy frontend for this module.<br> 
 > **Tasks in module:** To implement frontend.
 
-# Module: QTify Frontend
+# Module: Buildout Qtify v2
 
 ## Overview of Module
 
