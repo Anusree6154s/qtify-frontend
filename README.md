@@ -1,5 +1,5 @@
 > [!NOTE] 
-> **Repo contents:** Has frontend.<br> 
+> **Repo contents:** Has only frontend.<br> 
 > **Purpose of repo:** To deploy frontend for this module.<br> 
 > **Tasks in module:** To implement frontend.
 
