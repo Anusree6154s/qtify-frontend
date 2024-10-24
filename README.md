@@ -1,133 +1,126 @@
-> [!NOTE] 
-> **Repo contents:** Has only frontend.<br> 
-> **Purpose of repo:** To deploy frontend for this module.<br> 
-> **Tasks in module:** To implement frontend.
-
-# Module: Buildout Qtify v2
-
-## Overview of Module
-
-### QTify
-
-QTify is a song browsing web-app. We’ll be building the frontend of this web-app. The objective of this ME is to obtain a develop the skill of being able to build the UI of an application from scratch, when provided with its [Figma design](https://www.figma.com/file/tuCV26ozM1R75Ze6ShZxKs/Qtify?type=design&node-id=0-1&mode=design).
-
-During the course of this project:
-
-- Implemented core logic for various components such as the navbar, hero section, albums, and songs sections.
-- Added features such as auto search and the ability to play songs.
-- Improved UI by adding responsive design elements for a uniform experience across different devices.
-- Utilized REST APIs to dynamically load and render data served by the backend server.
-- Deployed the website to Vercel.
-
-<br>
-<div align="center"> 
-<img src="readme images/home page.png" width="70%" >
-<p align="center">QTify Home Page Interface</p>
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/99e89633-aea8-454c-b972-9a5f1ea54bf2" width="100"/>
+  <h1 id="title">QTify v2 Frontend</h1>
+  <p><strong>Frontend for QTify - A Song Browsing Web App</strong></p>
+  <p>
+    <a href="https://qtify-ten-gamma.vercel.app/">View QTify Frontend</a> •
+    <a href="https://www.figma.com/file/tuCV26ozM1R75Ze6ShZxKs/Qtify?type=design&node-id=0-1&mode=design">View Figma Design</a>
+  </p>
+  <img src="https://github.com/user-attachments/assets/97d4388d-c953-47dc-8579-0d221fef3ea7" width="700"/>
 </div>
 
-## My Tasks
+## Table of Contents
 
-1. **Adding frontend features for**:
-   - Home page and Songs page
-   - Dynamic Songs and Albums listing
-   - Search Bar
-   - Playing Songs
-2. **Deployment**
+1. [Project Overview](#project-overview)
+2. [Setup Instructions](#setup-instructions)
+3. [Project Breakdown](#project-breakdown)
+4. [Potential Improvements](#potential-improvements)
 
-## Deployment URL
+## Project Overview
 
-- Frontend (Vercel) - https://qtify-ten-gamma.vercel.app/
+<p id="description">QTify is a song browsing web-app developed to provide a smooth music discovery experience. This project focuses on building the frontend of the application using a provided Figma design.</p>
 
-## Milestones
+### Tech Stack
 
-### 1. Add Navbar and Hero Section
+- React.js
+- Material UI
+- Axios
+- Vercel (for deployment)
 
-- **Scope of work**:
-  - Developed a responsive Navbar with a reusable Logo component, Search bar, and Feedback button with hover effects.
-  - Designed the Hero Section featuring a catchy heading and a prominent image.
-  - Exported assets from Figma for visual consistency.
-- **Skills used**:
-  - React.js, Component Design, Responsive Design, CSS, Reusable Components, Event Handling, Figma Assets
-  <br>
-  <div align="center"> 
-  <img src="readme images/navbar and hero.png" width="70%" >
-  <p align="center"> Navbar and Hero section</p>
-  </div>
+### Features
 
-### 2. Add Album Grid and Albums Section with Grid Layout
+- Responsive Navbar with Search Bar and Feedback modal.
+- Album Grid with dynamic data fetched via REST APIs.
+- Song Carousel with genre-based filtering and Likes.
+- FAQ Section with Material UI Accordions.
+- Music Bar to play songs within the app.
+- Search with dropdown listing of albums and navigation to Album Details page.
+- Deployed on Vercel for live access.
 
-- **Scope of work**:
-  - Created a **Card component** as a reusable component to display information about albums using **Material UI**.
-  - Fetched data from the backend API for **Top Albums** and populated the card component.
-  - Implemented a **Grid layout** to display multiple cards for top albums.
-  - Created a reusable **Section component** with a title, “Collapse” button, followed by the grid of album cards.
-- **Skills used**:
-  - Material UI, Axios, CSS Grid, Figma Implementations
-  <br>
-  <div align="center"> 
-  <img src="https://storage.googleapis.com/crio-content-container-assets/ME_BUILDOUT_QTIFY_V2_MODULE_ME_BUILDOUT_QTIFY_V2_MODULE_ONE_1720004889_image_12.png" width="15%" >
-  <p > Album Card component</p>
-  </div>
+## Setup Instructions
 
-<br>
-<div align="center"> 
-<img src="https://storage.googleapis.com/crio-content-container-assets/ME_BUILDOUT_QTIFY_V2_MODULE_ME_BUILDOUT_QTIFY_V2_MODULE_ONE_1720004889_image_14.png" width="50%" >
-<p > Albums sections using Grid componnet</p>
-</div>
+### Frontend
 
-### 3. Implement Songs Filter and Carousel with Genre Tabs
+- #### Installation
 
-- **Scope of work**:
-  - Created a Songs section with a Tab component for genre filtering (All, Rock, Pop, Jazz, Blues).
-  - Fetched API data to display a carousel of songs by genre.
-  - Styled Material UI Tabs to match Figma design and updated Card component to show Likes.
-  - Enabled genre-based filtering and omitted a Show All button to avoid grid layout expansion.
-- **Skills used**:
-  - CSS Styling, Conditional Rendering, Carousel, Figma Design
+    ```bash
+    # clone repo
+    git clone https://github.com/Anusree6154s/qtify-frontend
+    cd qtify-frontend/qtify
 
-<br>
-<div align="center"> 
-<img src="https://storage.googleapis.com/crio-content-container-assets/ME_BUILDOUT_QTIFY_V2_MODULE_ME_BUILDOUT_QTIFY_V2_MODULE_ONE_1720004892_image_19.png" width="80%" >
-<p>Songs section with genre based Tab filtering</p>
-</div>
+    # install dependencies
+    npm install
+    ```
 
-### 4. Implement FAQ Section, Album Details Page and Music Bar
+- #### Running the App
+    ```bash
+    npm start
+    ```
 
-- **Scope of work**:
-  - Created an FAQ section with dynamic Accordions from Material UI and data fetched from the API.
-  - Added a Music Bar component to play songs within the app.
-  - Implemented a Modal for feedback with a full-screen overlay.
-  - Enhanced search with a dropdown listing albums and routing to the Album Details Page.
-  - Integrated pagination on the Album Details Page to display 13 songs per page.
-- **Skills used**:
-  - Functional Components, React Router, Pagination
+## Project Breakdown
 
-<br>
-<div align="center"> 
-<img src="https://storage.googleapis.com/crio-content-container-assets/ME_BUILDOUT_QTIFY_V2_MODULE_ME_BUILDOUT_QTIFY_V2_MODULE_ONE_1720004894_image_22.png" width="70%" >
-<p>FAQ Section and Music Bar</p>
-</div>
-<br>
-<div align="center"> 
-<img src="https://storage.googleapis.com/crio-content-container-assets/ME_BUILDOUT_QTIFY_V2_MODULE_ME_BUILDOUT_QTIFY_V2_MODULE_ONE_1720004894_image_23.png" width="80%" >
-<p>Feedback Modal</p>
-</div>
-<br>
-<div align="center"> 
-<img src="https://storage.googleapis.com/crio-content-container-assets/ME_BUILDOUT_QTIFY_V2_MODULE_ME_BUILDOUT_QTIFY_V2_MODULE_ONE_1720004895_image_24.gif" width="80%" >
-<p>Search with Dropdown Listing</p>
-</div>
-<br>
-<div align="center"> 
-<img src="https://storage.googleapis.com/crio-content-container-assets/ME_BUILDOUT_QTIFY_V2_MODULE_ME_BUILDOUT_QTIFY_V2_MODULE_ONE_1720004895_image_25.png" width="50%" >
-<p>Album Details Page</p>
-</div>
+### Components
 
+- **Navbar and Hero Section**:
+  - **Scope of Work**:
+    - Developed a responsive Navbar that includes reusable components: Logo, Search Bar, and Feedback Button.
+    - Designed an engaging Hero Section with a visually striking image and attention-grabbing headline.
+  - **Skills Used**: React.js, Component Design, Responsive Design, CSS, Figma Assets.
 
+    <div align="center">
+      <img src="readme images/navbar and hero.png" width="70%"/>
+      <h5>Navbar and Hero Section</h5>
+    </div>
 
-### 5. Deploy the Qtify Website
+- **Album Grid and Albums Section**:
+  - **Scope of Work**:
+    - Created a reusable Album Card component using Material UI for a consistent design.
+    - Fetched and dynamically populated the grid with data from the API, displaying top albums.
+  - **Skills Used**: Material UI, Axios, CSS Grid.
 
-- **Scope of work**:
-  - Deployed the QTify React app to Vercel.
-- **Skills used**:
-  - Deployment, Vercel
+    <div align="center">
+      <img src="https://storage.googleapis.com/crio-content-container-assets/ME_BUILDOUT_QTIFY_V2_MODULE_ME_BUILDOUT_QTIFY_V2_MODULE_ONE_1720004889_image_12.png" width="15%"/>
+      <h5>Album Card Component</h5>
+    </div>
+
+- **Songs Filter and Carousel with Genre Tabs**:
+  - **Scope of Work**:
+    - Developed a genre-filtered song section with a Tab component and a carousel for better navigation.
+    - Fetched genre-specific song data from the API, ensuring the content dynamically updates based on the genre selected.
+  - **Skills Used**: CSS Styling, Conditional Rendering, Swiper Carousel, Figma Design.
+
+    <div align="center">
+      <img src="https://storage.googleapis.com/crio-content-container-assets/ME_BUILDOUT_QTIFY_V2_MODULE_ME_BUILDOUT_QTIFY_V2_MODULE_ONE_1720004892_image_19.png" width="80%"/>
+      <h5>Songs Section with Genre-based Tabs</h5>
+    </div>
+
+- **FAQ Section, Album Details Page, and Music Bar**:
+  - **Scope of Work**:
+    - Implemented the FAQ section using Material UI's Accordion component for smooth interaction.
+    - Designed and integrated a Music Bar for seamless song playback within the app.
+    - Built a search functionality with dropdown results and created a detailed album page with pagination.
+  - **Skills Used**: Functional Components, React Router, Pagination.
+
+    <div align="center">
+      <img src="https://storage.googleapis.com/crio-content-container-assets/ME_BUILDOUT_QTIFY_V2_MODULE_ME_BUILDOUT_QTIFY_V2_MODULE_ONE_1720004894_image_22.png" width="70%"/>
+      <h5>FAQ Section and Music Bar</h5>
+    </div>
+  
+    <div align="center">
+      <img src="https://storage.googleapis.com/crio-content-container-assets/ME_BUILDOUT_QTIFY_V2_MODULE_ME_BUILDOUT_QTIFY_V2_MODULE_ONE_1720004895_image_25.png" width="50%"/>
+      <h5>Album Details Page</h5>
+    </div>
+
+### Deployment
+Deployed the frontend application on Vercel for easy access and continuous deployment.
+
+## Potential Improvements
+
+- [ ] Add user login and authentication.
+- [ ] Implement a playlist feature for users.
+- [ ] Enable user ratings and reviews for songs and albums.
+- [ ] Optimize the website for better performance and loading times.
+
+<p align="center"> 
+<img src="https://github.com/user-attachments/assets/01e12f26-2bd5-4ed2-80a5-bcefa74f9f80" width="0" id="image" alt="demo-gif"/>
+</p>
