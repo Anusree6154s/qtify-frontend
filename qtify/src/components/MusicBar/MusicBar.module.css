@@ -46,15 +46,19 @@
   gap: 10px;
 }
 
-.playArea button {
-  background-color: var(--color-black);
+#music-button {
+  background-color: black;
   border: none;
   cursor: pointer;
 }
 
-.playArea button svg {
-  color: white;
+#music-button:hover {
+  background-color: black;
 }
+
+/* .playArea button svg {
+  color: white;
+} */
 
 .playArea > div {
   width: 60%;

@@ -45,6 +45,7 @@ function MusicBar() {
       return; // Skip playback on initial render
     }
     if (selectedSong) {
+      audioRef.current.currentTime = 0;
       setProgress(0);
       setTimeout(() => {
         setPlay(true);
@@ -77,8 +78,12 @@ function MusicBar() {
           </div>
 
           <div className={styles.playArea}>
-            <button onClick={handlePlay}>
-              {play ? <PauseCircleIcon /> : <PlayCircleIcon />}
+            <button onClick={handlePlay} id='music-button' style={{background:'black', border:'none'}}>
+              {play ? (
+                <PauseCircleIcon style={{ color: "white" }} />
+              ) : (
+                <PlayCircleIcon style={{ color: "white" }} />
+              )}
             </button>
 
             <Box>
