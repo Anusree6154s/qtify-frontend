@@ -1,10 +1,10 @@
 import { ExpandMore } from "@mui/icons-material";
 import {
-    Accordion,
-    AccordionDetails,
-    AccordionSummary,
-    Stack,
-    Typography
+  Accordion,
+  AccordionDetails,
+  AccordionSummary,
+  Stack,
+  Typography,
 } from "@mui/material";
 import styles from "./Section.module.css";
 
@@ -15,7 +15,16 @@ export default function FaqSection({ title, data }) {
 
       <Stack className={styles.faqContainer} spacing={1}>
         {data?.map((faq, index) => (
-          <Accordion key={index} className={styles.faqAccordion}>
+          <Accordion
+            key={index}
+            className={styles.faqAccordion}
+            sx={{
+              "&.Mui-expanded": {
+                marginBottom: "0",
+                marginTop: "8px !important",
+              },
+            }}
+          >
             <AccordionSummary
               expandIcon={<ExpandMore sx={{ color: "var(--color-primary)" }} />}
               aria-controls="panel1-content"

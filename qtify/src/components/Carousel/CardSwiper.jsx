@@ -31,7 +31,7 @@ function CardSwiper({ data, songs }) {
       navigation={true}
       modules={[Navigation]}
       className="mySwiper"
-    >
+      >
       {data?.map((group, index) => (
         <SwiperSlide
           key={index}

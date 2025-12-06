@@ -42,12 +42,12 @@ export default function SongsSection({ value, setValue, genres, data, songs }) {
           ))}
         </TabList>
 
-        <TabPanel value="all">
+        <TabPanel value="all" sx={{ px: 0 }}>
           <CardSwiper data={data} songs={songs} />
         </TabPanel>
 
         {genres?.map((genre) => (
-          <TabPanel key={genre.key} value={genre.key}>
+          <TabPanel key={genre.key} value={genre.key} sx={{ px: 0 }}>
             <CardSwiper
               data={data?.filter((item) => item.genre.key === genre.key)}
               songs={songs}
