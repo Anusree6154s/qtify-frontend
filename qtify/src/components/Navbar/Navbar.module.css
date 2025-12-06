@@ -21,7 +21,11 @@
 }
 
 .modal .stack {
-  gap: 33px;
+  height: 100%;
+}
+
+.modal .stack label, input{
+  font-size: 12px !important;
 }
 
 .modal .stack > div {
@@ -62,3 +66,4 @@
 .modal button:last-child:hover {
   background-color: var(--color-primary);
 }
+
