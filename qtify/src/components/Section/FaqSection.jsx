@@ -10,7 +10,7 @@ import styles from "./Section.module.css";
 
 export default function FaqSection({ title, data }) {
   return (
-    <Stack sx={{ mb: 6, mx: { xs: 2, sm: 10 } }} spacing={2}>
+    <Stack sx={{ mb: 6, mx: { xs: 2, sm:10, md: 30 } }} spacing={2}>
       <Typography component="h2">{title}</Typography>
 
       <Stack className={styles.faqContainer} spacing={1}>
