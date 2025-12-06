@@ -1,30 +1,20 @@
-import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-import MusicBar from "../MusicBar/MusicBar";
-import axios from "axios";
-import ArrowCircleLeftOutlinedIcon from "@mui/icons-material/ArrowCircleLeftOutlined";
-import { useNavigate } from "react-router-dom";
 import {
-  Stack,
-  Table,
-  TableBody,
-  TableCell,
-  TableContainer,
-  TableHead,
-  TableRow,
-  Paper,
+  Box,
+  Stack
 } from "@mui/material";
 import Pagination from "@mui/material/Pagination";
-
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import { MusicContext } from "../../MusicContext";
-
+import MusicBar from "../MusicBar/MusicBar";
 import styles from "./AlbumDetails.module.css";
+import AlbumDetailsHeader from "./AlbumDetailsHeader";
+import SongsList from "./SongsList";
 
 function AlbumDetails({ data }) {
   const { id } = useParams();
   const [album, setAlbum] = useState(null);
   const [page, setPage] = useState(1);
-  const navigate = useNavigate();
   const { selectedSong, setSelectedSong } = React.useContext(MusicContext);
 
   useEffect(() => {
@@ -58,63 +48,33 @@ function AlbumDetails({ data }) {
   }
 
   return (
-    <div className={styles.albumDetails}>
+    <Box className={styles.albumDetails}>
       <Stack className={styles.stack} spacing={2}>
-        <div className={styles.header}>
-          <ArrowCircleLeftOutlinedIcon onClick={() => navigate("/")} />
-          <img src={album.image} alt={album.title} />
-          <div>
-            <h3>{album.title}</h3>
-            <div>
-              <p>{album.description}</p>
-              <p>
-                {album.songs.length} songs • {totalDuration()} • {album.follows}{" "}
-                Follows
-              </p>
-            </div>
-          </div>
-        </div>
+        <AlbumDetailsHeader album={album} totalDuration={totalDuration} />
 
-        <div className={styles.pagination}>
-          <Pagination
-            count={Math.ceil(album.songs.length / songsPerPage)}
-            page={page}
-            onChange={handleChange}
-            size="small"
-          />
-        </div>
+        <Pagination
+          count={Math.ceil(album.songs.length / songsPerPage)}
+          page={page}
+          onChange={handleChange}
+          size="small"
+          className={styles.pagination}
+          sx={(theme) => ({
+            [`& ul`]: {
+              [theme.breakpoints.down(500)]: {
+                justifyContent: "center !important",
+              },
+            },
+          })}
+        />
 
-        <TableContainer component={Paper} className={styles.table}>
-          <Table>
-            <TableHead>
-              <TableRow>
-                <TableCell> Title </TableCell>
-                <TableCell> Artist </TableCell>
-                <TableCell sx={{ textAlign: "right !important" }}>
-                  {" "}
-                  Duration{" "}
-                </TableCell>
-              </TableRow>
-            </TableHead>
-            <TableBody>
-              {currentSongs.map((song, index) => (
-                <TableRow key={index} onClick={() => setSelectedSong(song)}>
-                  <TableCell>
-                    <img src={song.image} alt={song.title} />
-                    {song.title}
-                  </TableCell>
-                  <TableCell>{song.artists.join(", ")}</TableCell>
-                  <TableCell>
-                    {Math.ceil(song.durationInMs / 60000)} min
-                  </TableCell>
-                </TableRow>
-              ))}
-            </TableBody>
-          </Table>
-        </TableContainer>
+        <SongsList
+          currentSongs={currentSongs}
+          setSelectedSong={setSelectedSong}
+        />
       </Stack>
+
       <MusicBar src="../../assets/music.mp3" />
-    </div>
+    </Box>
   );
 }
 

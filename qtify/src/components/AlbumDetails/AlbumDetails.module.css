@@ -14,7 +14,11 @@
 .albumDetails .header {
   display: flex;
   gap: 30px;
-  height: 30vh;
+}
+
+.albumDetails .header h3 {
+  font-family: "Poppins";
+  font-size: 16px;
 }
 
 .albumDetails .header svg {
@@ -34,13 +38,20 @@
   flex: 1;
 }
 
-.albumDetails .header > div div {
+.albumDetails .header p {
   color: grey;
   font-size: 12px;
+  font-family: "Poppins";
 }
 
 .albumDetails .pagination {
-  text-align: right;
+  text-align: right !important;
+  width: 100%;
+  padding: 30px 0px;
+}
+
+.albumDetails .pagination ul {
+  justify-content: end;
 }
 
 .albumDetails nav {
@@ -85,6 +96,10 @@
   color: #fff;
   font-size: 12px;
   border-bottom: 1px solid #ccc;
+}
+
+.albumDetails tbody tr:last-child td {
+    border-bottom: none;
 }
 
 .albumDetails tbody td:first-child {

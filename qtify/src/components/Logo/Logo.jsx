@@ -5,7 +5,6 @@ import LogoImage from "../../assets/logo.svg";
 export default function Logo() {
   return (
     <Link to="/">
-      {" "}
       <Box component="img" src={LogoImage} alt="logo" width={67} />
     </Link>
   );
