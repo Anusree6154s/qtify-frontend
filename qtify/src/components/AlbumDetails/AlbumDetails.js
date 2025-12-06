@@ -1,7 +1,4 @@
-import {
-  Box,
-  Stack
-} from "@mui/material";
+import { Box, Stack } from "@mui/material";
 import Pagination from "@mui/material/Pagination";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
@@ -15,7 +12,7 @@ function AlbumDetails({ data }) {
   const { id } = useParams();
   const [album, setAlbum] = useState(null);
   const [page, setPage] = useState(1);
-  const { selectedSong, setSelectedSong } = React.useContext(MusicContext);
+  const { setSelectedSong } = React.useContext(MusicContext);
 
   useEffect(() => {
     if (id && data) {

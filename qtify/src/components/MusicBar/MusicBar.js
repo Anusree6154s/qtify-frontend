@@ -9,7 +9,7 @@ import music from "../../assets/music.mp3";
 import styles from "./MusicBar.module.css";
 
 function MusicBar() {
-  const { selectedSong, setSelectedSong } = React.useContext(MusicContext);
+  const { selectedSong } = React.useContext(MusicContext);
   const [play, setPlay] = React.useState(false);
   const [progress, setProgress] = React.useState(0);
   const [isInitialRender, setIsInitialRender] = React.useState(true);
