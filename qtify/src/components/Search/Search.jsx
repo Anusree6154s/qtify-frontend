@@ -9,11 +9,15 @@ import styles from "./Search.module.css";
 
 function Search({ searchData, placeholder, sx, maxWidth }) {
   const searchRef = useRef(null);
+  const navigate = useNavigate();
+
   const [searchWidth, setSearchWidth] = useState(null);
+  const [value, setValue] = useState(null);
+  const [inputValue, setInputValue] = useState("");
+  const [open, setOpen] = useState(false);
 
   const {
     getRootProps,
-    value,
     getInputProps,
     getListboxProps,
     getOptionProps,
@@ -23,13 +27,24 @@ function Search({ searchData, placeholder, sx, maxWidth }) {
     options: searchData || [],
     getOptionLabel: (option) => option.title,
     getOptionKey: (option) => option.id,
-  });
 
-  const navigate = useNavigate();
-  const onSubmit = (e, value) => {
-    e.preventDefault();
-    navigate(`/album/${value.slug}`);
-  };
+    // for whole obj input
+    value,
+    onChange: (_, newValue) => setValue(newValue),
+
+    // for text input
+    inputValue,
+    onInputChange: (e, newInputValue) => {
+      setInputValue(newInputValue);
+      setOpen(newInputValue.length > 0);
+    },
+    isOptionEqualToValue: (opt, val) => opt.id === val?.id,
+
+    // to avoid auto open on click
+    open,
+    onOpen: () => {}, // prevent auto-open
+    onClose: () => setOpen(false),
+  });
 
   useEffect(() => {
     if (searchRef.current) {
@@ -57,7 +72,10 @@ function Search({ searchData, placeholder, sx, maxWidth }) {
           <Box
             component="form"
             className={styles.wrapper}
-            onSubmit={(e) => onSubmit(e, value)}
+            onSubmit={(e) => {
+              e.preventDefault();
+              if (value) navigate(`/albumdetails/${value.id}`);
+            }}
           >
             <InputBase
               name="album"
@@ -66,6 +84,9 @@ function Search({ searchData, placeholder, sx, maxWidth }) {
               inputComponent="input"
               required
               inputProps={getInputProps()}
+              value={inputValue}
+              onChange={(e) => setInputValue(e.target.value)}
+              onFocus={() => setOpen(false)}
             />
             <IconButton type="submit" className={styles.searchButton}>
               <Box

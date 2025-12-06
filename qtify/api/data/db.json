@@ -7524,23 +7524,19 @@
     "data": [
       {
         "question": "How do I play a song?",
-        "answer": "Just click the play button on any song, album, or playlist to start listening instantly."
+        "answer": "Just click the play button on any song for a nonstop experience featuring our latest collections."
       },
       {
-        "question": "How do I like a song?",
-        "answer": "Click the heart icon next to a song to add it to your liked songs and build your personal favorites library."
+        "question": "How do I search for an album?",
+        "answer": "Click the search bar, type your favorite album name, and click it to navigate to its page filled with your favorite records."
       },
       {
-        "question": "How do I create my own playlist?",
-        "answer": "Click 'Create Playlist', give it a name, and start adding your favorite songs to it."
-      },
-      {
-        "question": "Can I discover new music on Qtify?",
-        "answer": "Absolutely! Explore trending playlists, new releases, and curated recommendations made just for you."
+        "question": "What variety of albums does Qtify offer?",
+        "answer": "Qtify offers one of the largest varieties of songs, ranging from Texan jingles to Mediterranean tunes, all available at one click!"
       },
       {
         "question": "Why should I use Qtify instead of other music apps?",
-        "answer": "Qtify offers personalized recommendations, sleek design, and seamless listening across devices — all for free."
+        "answer": "Qtify offers curated lists of albums from our latest collections, perfectly matching your mood."
       }
     ]
   }

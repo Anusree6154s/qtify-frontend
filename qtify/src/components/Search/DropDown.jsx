@@ -1,5 +1,4 @@
 import { Box, ListItem, Stack, styled, Typography } from "@mui/material";
-import { useNavigate } from "react-router-dom";
 import { truncate } from "../../helpers/helpers";
 import styles from "./Search.module.css";
 
@@ -35,21 +34,19 @@ export default function DropDown({
   getOptionProps,
   searchWidth,
 }) {
-  const navigate = useNavigate();
 
   if (!groupedOptions) return null;
-            
+
   return (
     <Listbox {...getListboxProps()} sx={{ width: searchWidth || 400 }}>
-      {groupedOptions.map((option) => {
+      {groupedOptions.map((option, index) => {
         const artists = option.songs.map((s) => s.artists.join(","));
-        const { key, ...optionProps } = getOptionProps({ option });
+        const { key, ...optionProps } = getOptionProps({ option, index });
 
         return (
           <ListItem
             key={key}
             {...optionProps}
-            onClick={() => navigate(`/albumdetails/${option.id}`)}
             className={styles.listElement}
           >
             <Stack sx={{ textAlign: "left", width: "100%" }}>
